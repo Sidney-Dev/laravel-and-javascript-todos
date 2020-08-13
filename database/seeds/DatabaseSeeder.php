@@ -11,6 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $todos = ['go to the store', 'Take the trash', 'buy a bed', 'Go for a walk'];
+
+        foreach($todos as $todo){
+            DB::table('todos')->insert(['name'=> $todo]);
+        }
     }
 }

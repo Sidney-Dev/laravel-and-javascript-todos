@@ -93,6 +93,7 @@ addForm.addEventListener('submit', function(e) {
  */
 searchForm.addEventListener('keyup', e => {
 
+    e.preventDefault();
     const inputText = e.target.value.toLowerCase().trim(); // get the input text
     
     const listItems = Array.from(list.children);// get all ul lists and convert to an array
